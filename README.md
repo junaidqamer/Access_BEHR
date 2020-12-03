@@ -28,6 +28,10 @@ Another hurdle is that current record systems have the ability to have visits be
 How can **Blockchain** fix it?
 </h2>
 
+<p align="center">
+ <img src="https://media.giphy.com/media/W2uXnF6L2DUOYyzWXm/giphy.gif" width="300" height="300" />
+</h2>
+
 
 1. By decentralizing health records, there’s no ownership of the records by any one vendor or provider.
 
@@ -40,8 +44,13 @@ How can **Blockchain** fix it?
 5. Blockchain can’t be altered, therefore the medical record stays intact.
 
 <h2 align="center">
-HIPPA
+What is HIPPA? (Not to be confused with hippo!)
 </h2>
+
+<p align="center">
+ <img src="https://media.giphy.com/media/h2oj6BOcsc8Fi/giphy.gif" width="300" height="300" />
+</h2>
+
 
 The Health Insurance Portability and Accountability Act of 1996, commonly known as HIPAA, is a series of regulatory standards that outline the lawful use and disclosure of protected health information (PHI). HIPAA compliance is regulated by the Department of Health and Human Services (HHS) and enforced by the Office for Civil Rights (OCR). 
 HIPPA was established to protect your  health records and financial health records. It provides ACCESS to patient’s to their own medical records, as well as dictating who this information can be shared with. 
@@ -63,6 +72,16 @@ Federal requirements for an Electronic Health Record system.
 
 5. PATIENT ENGAGEMENT- Patient have to be involved with their care and kept up to date with everything pertaining to their health.
 
+<h2 align="center">
+How does *Access* meet these requirements?
+</h2>
 
+1. PATIENT SAFETY- Using Async 
 
+2. DATA SHARING- Data will be shared by sharing a private key. Patient have read only capabilities and their medical record will sit in their wallets but providers will use the private key to create and deploy a contract/office visit. Private keys serves the same function as a medical record number or even a social security number.
 
+3. DOCUMENTATION- This fits in with privacy. Records can’t be tampered with once the block is closed.
+
+4. PRIVACY & SECURITY- Blocks are secured through cryptography. Each participant has their own keys/ digital signatures this would allow for easy transaction identification. Because each visit will be a block, once it is closed it can not be reopened and it keeps records from being tampered. 
+
+5. PATIENT ENGAGEMENT- Patient’s are kept in the loop of their own health as their medical records are kept in their wallet versus in a server that patient’s can’t access.
