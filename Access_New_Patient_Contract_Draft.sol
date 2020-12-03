@@ -15,7 +15,7 @@ pragma solidity ^0.5.0;
 
 
 
-import "github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v2.5.0/contracts/math/SafeMath.sol";
+//import "github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v2.5.0/contracts/math/SafeMath.sol";
 import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v2.5.0/contracts/drafts/Counters.sol";
 
 contract PatientVisit {
@@ -23,12 +23,12 @@ contract PatientVisit {
     constructor() public {
         address payable provider = msg.sender;
         address payable patient; 
-        string memory ReasonForVisit;
+        string memory ReasonForVisit="";
     }
     
     using Counters for Counters.Counter;
-    Counters.Counter patientIds;
-    Counters.Counter visitCount;
+   // Counters.Counter patientIds;
+    Counters.Counter private visitCount;
     
     modifier only_admin{
         require(msg.sender==provider);
@@ -36,7 +36,24 @@ contract PatientVisit {
     mapping(address=>informationAndDemographics) _patientsData;
     
     uint[] private patientIds;
-    uint[] private visitCount;
+    
+    //New patient added
+    event Message(); //(uint token_id, uint appraisal_value, string report_uri);
+   
+    //Duplicate patient, increment visitcount. 
+    //event
+    
+    //Labs ordered.
+    //event
+    
+    // Referral ordered.
+    //event
+    
+    //Medication ordered.
+    //event
+    
+    //Reschedule/ Follow-Up Notification
+    //event
     
     struct informationAndDemographics{
         uint patientId;
@@ -62,71 +79,65 @@ contract PatientVisit {
     
     function addPatientInfo(
         uint _patientId,
-        string _patientName, 
-        string _patientDoB,
+        string memory _patientName, 
+        string memory _patientDoB,
         bool _NewPatient,
-        string _patientGenderId,
-        string _patientRelationshipStatus,
-        string _patientSexuality,
-        string _patientPreferredPronoun,
+        string memory _patientGenderId,
+        string memory _patientRelationshipStatus,
+        string memory _patientSexuality,
+        string memory _patientPreferredPronoun,
         bool _patientMarried,
         bool _patientSmoker,
         bool _patientAlcohol,
-        string _patientAddress,
-        string _patientCity,
-        string _patientState,
-        string _patientZip,
-        string _patientCountry,
-        string _patientPhoneNo,
-        string _patientFamilyHistory,
-        string _patientPreExistingConditions,
-        string _patientAllergies,
-        string _patientMedicationList) only_admin public returns(bool) {
-            var _patientData=_patientsData[_patientId];
+        string memory _patientAddress,
+        string memory _patientCity,
+        string memory _patientState,
+        string memory _patientZip,
+        string memory _patientCountry,
+        string memory _patientPhoneNo,
+        string memory _patientFamilyHistory,
+        string memory _patientPreExistingConditions,
+        string memory _patientAllergies,
+        string memory _patientMedicationList) only_admin public returns(bool) {
+            //var _patientData=_patientsData[_patientId];
             //a patient address/ID can be added only once
             if(bytes(_NewPatient == "False")){
                 emit Message('This patient has been previously seen here, this will be a duplicate patient. Look at previous blocks with patient ID and privateKey. Visit will be added to visit count.');
                 visitCount.increment() ;}
-                }
             //Look at stopping the function above when new patient is false.
-            
-            if(bytes(_patientData.patientName).length==0 && bytes(_patientName).length!=0) {
-                 _patientData.patientId= _patientId;
-                 _patientData.patientName=_patientName; 
-                 _patientData.patientDoB=_patientDoB;
-                 _patientData.NewPatient=_NewPatient; 
-                 _patientData.patientGenderId=_patientGenderId;
-                 _patientData.patientRelationshipStatus=_patientRelationshipStatus;
-                 _patientData.patientSexuality=_patientSexuality;
-                 _patientData.patientPreferredPronoun=_patientPreferredPronoun;
-                 _patientData.patientMarried=_patientMarried;
-                 _patientData.patientSmoker=_patientSmoker;
-                 _patientData.patientAlcohol=_patientAlcohol;
-                 _patientData.patientAddress=_patientAddress;
-                 _patientData.patientCity=_patientCity;
-                 _patientData.patientState=_patientState;
-                 _patientData.patientZip=_patientZip;
-                 _patientData.patientCountry=_patientCountry;
-                 _patientData.patientPhoneNo=_patientPhoneNo;
-                 _patientData.patientFamilyHistory=_patientFamilyHistory;
-                 _patientData.patientPreExistingConditions=_patientPreExistingConditions;
-                 _patientData.patientMedicationList=_patientMedicationList;}
-                 patientIds.push(_patientId)
+            else {
+                 _patientsData.patientId= _patientId;
+                 _patientsData.patientName=_patientName; 
+                 _patientsData.patientDoB=_patientDoB;
+                 _patientsData.NewPatient=_NewPatient; 
+                 _patientsData.patientGenderId=_patientGenderId;
+                 _patientsData.patientRelationshipStatus=_patientRelationshipStatus;
+                 _patientsData.patientSexuality=_patientSexuality;
+                 _patientsData.patientPreferredPronoun=_patientPreferredPronoun;
+                 _patientsData.patientMarried=_patientMarried;
+                 _patientsData.patientSmoker=_patientSmoker;
+                 _patientsData.patientAlcohol=_patientAlcohol;
+                 _patientsData.patientAddress=_patientAddress;
+                 _patientsData.patientCity=_patientCity;
+                 _patientsData.patientState=_patientState;
+                 _patientsData.patientZip=_patientZip;
+                 _patientsData.patientCountry=_patientCountry;
+                 _patientsData.patientPhoneNo=_patientPhoneNo;
+                 _patientsData.patientFamilyHistory=_patientFamilyHistory;
+                 _patientsData.patientPreExistingConditions=_patientPreExistingConditions;
+                 _patientsData.patientMedicationList=_patientMedicationList;}
+                 patientIds.push(_patientId);
                  emit Message('A new patient has been added succesfully.');
                  return true;}
-            else{
-                emit Message('This patient has already been seen here/ this will be a duplicate patient. Look at previous blocks with patient ID and privateKey. Visit will be added to visit count.');
-                return false;}
-                }
 
     address payable provider = msg.sender;
     address payable patient; 
-
+    
     function setReasonForVisit(string memory _chiefComplaint) private returns(string memory) {
         require(provider == msg.sender, "You are not authorized to create or edit medical records!");
-        ReasonForVisit = _chiefComplaint;
+        string memory ReasonForVisit = _chiefComplaint;
     }
-    function getReasonForVist() private view returns(string memory) {
+    function getReasonForVisit() private view  returns(string memory) {
         return ReasonForVisit;
 }
 }
