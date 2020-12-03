@@ -3,6 +3,7 @@ Access BEHR :electron:
 </h1>
 
 
+
 Developed by fellow classmates of the Columbia University Fu Foundation School of Engineering Financial Technology Bootcamp, Access is the future of HealthCare as we know it. Access puts you in control with your life at your fingertips. Access is a decentralized medical record system that allows patients to have full access of their medical records wherever and whenever. It allows patients control to forward their updated health profile to the provider of their choice. Now a patient from Alabama can be seen in Michigan and receive expeditious and thorough analysis because their medical records are accessible. That same patient could also be seen in Brazil with no issue. We live in a world of global markets, a world of travel, there are truly no borders so why should our medical records have them?
 
 Why Access? Currently, there is no centralized or decentralized database of patients’ health records. Databases are fragmented and complete picture of patients’ records are not accessible by new providers. Access gives patients power to forward their updated health records to the provider of their choice.
