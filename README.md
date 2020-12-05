@@ -150,6 +150,7 @@ Coding with Solidity
 ![alt text](https://github.com/junaidqamer/Access_BEHR/blob/main/Images/functions%203.png)
 
 
+
 ### ***Setting up our visit template. as described above.***
 
 
@@ -160,3 +161,13 @@ Coding with Solidity
 
 
 ### **Through mapping we are connecting a wallet with a balance in order to request a payment for the visit that will be closed.**
+
+
+<h2 align="center">
+The Future.
+</h2>
+
+
+**What do we forsee in the future for blockchain health records?**
+
+
