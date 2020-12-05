@@ -125,3 +125,38 @@ COST OF VISIT
 <h2 align="center">
 Coding with Solidity
 </h2>
+
+
+### Creating a contract:
+
+![alt text](https://github.com/junaidqamer/Access_BEHR/blob/main/Images/Creating%20a%20contract%201..png)
+
+### **We initiate our contract by listing our variables, and creating a way to keep track a count of visits. We are also making it so providers are the only ones who can make edits.**
+
+
+
+### Flags and Notifications:
+
+![alt text](https://github.com/junaidqamer/Access_BEHR/blob/main/Images/flags%20and%20notifications%202.png)
+
+
+### **These were set up to have alerts if a patient has been to the office before, how many visits, are there outstanding labs. This is anything we want to be informed about.**
+
+
+
+### Functions:
+
+
+![alt text](https://github.com/junaidqamer/Access_BEHR/blob/main/Images/functions%203.png)
+
+
+### ***Setting up our visit template. as described above.***
+
+
+
+### Connecting a Wallet with a Balance to be paid for services:
+
+![alt text](https://github.com/junaidqamer/Access_BEHR/blob/main/Images/mapping%20connecting%20balancewallet%204%20paid.png)
+
+
+### **Through mapping we are connecting a wallet with a balance in order to request a payment for the visit that will be closed.**
