@@ -77,7 +77,7 @@ Federal requirements for an Electronic Health Record system.
 How does *Access* meet these requirements?
 </h2>
 
-1. PATIENT SAFETY- Using Async 
+1. PATIENT SAFETY- 
 
 2. DATA SHARING- Data will be shared by sharing a private key. Patient have read only capabilities and their medical record will sit in their wallets but providers will use the private key to create and deploy a contract/office visit. Private keys serves the same function as a medical record number or even a social security number.
 
@@ -86,3 +86,42 @@ How does *Access* meet these requirements?
 4. PRIVACY & SECURITY- Blocks are secured through cryptography. Each participant has their own keys/ digital signatures this would allow for easy transaction identification. Because each visit will be a block, once it is closed it can not be reopened and it keeps records from being tampered. 
 
 5. PATIENT ENGAGEMENT- Patient’s are kept in the loop of their own health as their medical records are kept in their wallet versus in a server that patient’s can’t access.
+
+<h2 align="center">
+How will Access work?
+</h2>
+
+Patients will own their health record in their personal wallet. Although, they will have view only capabilities to avoid health records from being altered.
+When a new provider visit is scheduled, patients will hand over their personal key to their wallet to their new provider.
+Providers will essentially begin a new contract or launch a new block in the patient’s chain. (Each new visit is a block). (Providers have viewing and writing capabilities).
+To launch a new contract, patients will have a minimum amount of ETH in their wallet to be able to pay for their visit. (essentially there will be no outstanding bills in our future).
+After a visit is closed, a request will be made for payment to the patient’s wallet.
+
+<h2 align="center">
+Templating a New Patient Visit
+</h2>
+
+DEMOGRAPHICS- Patient ID, name, DOB, relationship status, smoking status, gender, preferred pronouns, address, city, state, zip Code, family history, pre-existing conditions, and medication list.
+
+CHIEF COMPLAINT- Why are you here today?
+
+HPI (history of present illness)- What got you here today? What have you been doing thus far? Short history.
+
+Allergies, surgical history
+
+PHYSICAL EXAM
+
+VITALS
+
+LAB AND RADIOLOGY RESULTS
+
+ASSESSMENT AND FINDINGS: Conclusions and plans based on today’s visit.
+
+TEST ORDERED- RX, lab test, radiology.
+
+COST OF VISIT
+
+
+<h2 align="center">
+Coding with Solidity
+</h2>
