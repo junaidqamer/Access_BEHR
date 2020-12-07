@@ -170,4 +170,24 @@ The Future.
 
 **What do we forsee in the future for blockchain health records?**
 
+In the future, we foresee insurances minting tokens to be given to patients depending on their health plan and/or health status. Billing issues will be a thing of the past and issues like surprise billing would be obsolete. 
+
+1.Insurances mint tokens
+
+2.Tokens are given to patients based on a health plan. 
+
+3.Patients pay providers directly with tokens received by their insurance.
+
+4.Insurance exchange provider tokens for working currency.
+
+
+Some ideas on how to accomplish this.
+
+A separate smart contract is used to generate tokens. 
+ERC 777 standard is used to add insurance companies as mint operators in the contract.
+Each insurance company mint tokens (Access tokens: ACS) as needed according to predefined exchange rate. 
+Operator (insurance) transfer Tokens to each patient’s wallet based on patient’s health plans. Operators transfer ACS tokens in exchange of ETH/USD.
+Patients use their tokens in each provider visit and make payments directly to the medical provider. 
+
+
 
